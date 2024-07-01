@@ -18,6 +18,15 @@
         };
     };
 
+    macros {
+        TEST: TEST {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp P &kp R &kp I &kp N &kp T &kp LPAR &kp DQT &kp DQT &kp RPAR>;
+            label = "TEST";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -44,10 +53,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7     &kp N8    &kp N9     &kp N0             &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT  &kp C_VOLUME_UP    &kp DEL
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &trans     &trans    &trans     &kp C_VOLUME_DOWN  &kp ESC
-                                        &kp LGUI      &kp ENTER     &trans          &trans    &kp SPACE  &kp RALT
+&kp TAB    &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7     &kp N8    &kp N9     &kp N0             &kp BSPC
+&trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT  &kp C_VOLUME_UP    &kp DEL
+&kp LSHFT  &trans        &trans        &trans        &trans        &trans          &trans    &trans     &trans    &trans     &kp C_VOLUME_DOWN  &kp ESC
+                                       &kp LGUI      &kp ENTER     &trans          &trans    &kp SPACE  &kp RALT
             >;
         };
 
@@ -68,10 +77,10 @@
 
         layer_3 {
             bindings = <
-&kp F12  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-&trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
-&trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
-                         &trans  &trans  &trans    &trans  &trans  &trans
+&kp F12       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&kp CAPSLOCK  &TEST   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
+&trans        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
+                              &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
