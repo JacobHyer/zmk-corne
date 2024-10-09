@@ -16,14 +16,10 @@
             bindings = <&mo 3>;
             key-positions = <38 39>;
         };
-    };
 
-    macros {
-        TEST: TEST {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp P &kp R &kp I &kp N &kp T &kp LPAR &kp DQT &kp DQT &kp RPAR>;
-            label = "TEST";
+        gaming_layer_toggle {
+            bindings = <&tog 4>;
+            key-positions = <38 39 12>;
         };
     };
 
@@ -81,6 +77,15 @@
 &kp CAPSLOCK    &bt BT_SEL 0  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
 &bt BT_CLR_ALL  &trans        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
                                       &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        Factorio {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &kp SPACE    &trans  &trans  &trans
             >;
         };
     };
