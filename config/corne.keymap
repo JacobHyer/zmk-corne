@@ -22,6 +22,11 @@
             bindings = <&tog 4>;
             key-positions = <39 38 4>;
         };
+
+        Toggle_Unity_Layer {
+            bindings = <&tog 5>;
+            key-positions = <38 39 5>;
+        };
     };
 
     keymap {
@@ -87,6 +92,15 @@
 &trans   &trans  &trans  &trans  &trans     &trans    &trans  &trans      &trans  &trans  &trans  &trans
 &trans   &trans  &trans  &trans  &trans     &trans    &trans  &trans      &trans  &trans  &trans  &trans
                          &trans  &kp SPACE  &trans    &trans  &kp RETURN  &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&kp LEFT_ALT  &trans  &trans  &trans  &trans     &trans    &trans  &trans     &trans  &trans  &trans  &trans
+&trans        &trans  &trans  &trans  &trans     &trans    &trans  &trans     &trans  &trans  &trans  &trans
+&trans        &trans  &trans  &trans  &trans     &trans    &trans  &trans     &trans  &trans  &trans  &trans
+                              &trans  &kp SPACE  &trans    &trans  &kp ENTER  &trans
             >;
         };
     };
